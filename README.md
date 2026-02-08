@@ -74,15 +74,25 @@ bun run preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
-## GitHub Pages (стейджинг)
+## Тестовый стейджинг
 
-Сайт автоматически деплоится на GitHub Pages при пуше в ветку `main` или по ручному запуску workflow.
+### Вариант 1: Vercel или Netlify (рекомендуется)
 
-1. В репозитории: **Settings → Pages** выберите **Source**: "GitHub Actions".
-2. После первого успешного деплоя сайт будет доступен по адресу:  
-   `https://<user>.github.io/<repository>/`
+Удобнее всего для стейджинга: нет возни с baseURL, JS и стили работают из коробки, есть превью для каждого PR.
 
-Локальная сборка под тот же baseURL (для проверки):
+- **Vercel**: [vercel.com](https://vercel.com) → Import Git repository → Nuxt определяется автоматически. Пуш в `main` = прод, ветки = preview-URL.
+- **Netlify**: [netlify.com](https://netlify.com) → Add new site → Import from Git. Build command: `npm run build`, Publish directory: `.output/public` (или укажите Nitro preset в `nuxt.config` для static).
+
+Дополнительные конфиги не нужны.
+
+### Вариант 2: GitHub Pages
+
+Сайт деплоится workflow **Deploy to GitHub Pages** при пуше в `main`. Используется один workflow (`deploy-pages.yml`) с `nuxt build --preset github_pages` и корректным baseURL.
+
+1. **Settings → Pages** → Source: **GitHub Actions**.
+2. Сайт: `https://<user>.github.io/<repository>/`
+
+Локальная проверка сборки под тот же baseURL:
 
 ```bash
 NUXT_APP_BASE_URL=/имя-репозитория/ npm run build -- --preset github_pages
