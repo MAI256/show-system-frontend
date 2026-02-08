@@ -1,0 +1,43 @@
+<!doctype html>
+<html {{ HTML_ATTRS }}>
+    <head {{ HEAD_ATTRS }}>
+        {{ HEAD }}
+        <style>
+            /* Hide page content until app is fully loaded */
+            #__nuxt {
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+
+            #__nuxt.loaded {
+                opacity: 1;
+            }
+
+            /* Native loader */
+            #nuxt-loading {
+                width: 100vw;
+                height: 100vh;
+                background: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 99999;
+                pointer-events: none;
+                opacity: 1;
+                transition: opacity 0.5s ease;
+            }
+
+            #nuxt-loading.hide {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+        </style>
+    </head>
+    <body {{ BODY_ATTRS }}>
+        <!-- Native loader that shows immediately -->
+        <div id="nuxt-loading"></div>
+
+        {{ APP }}
+    </body>
+</html>

@@ -1,0 +1,98 @@
+/* Sizes */
+$mobile: 1100px;
+
+:root {
+  --mobile: $mobile;
+}
+
+/* Colors */
+$black: #010101;
+$white: #fff;
+$icons-white: #fcfcfc;
+
+$background: $black;
+$text-color-primary: $white;
+
+/* Typography Families */
+$font-family-text: "Geologica", sans-serif;
+$font-family-display: "Unbounded", sans-serif;
+
+/* Typography Mixins */
+@define-mixin text-light-small {
+  font-family: $font-family-text;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@define-mixin text-light-medium {
+  font-family: $font-family-text;
+  font-size: 1rem; /* 16px */
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@define-mixin text-light-average {
+  font-family: $font-family-text;
+  font-size: 1.125rem; /* 18px */
+  font-weight: 300;
+  line-height: 1.28;
+}
+
+@define-mixin text-light-large {
+  font-family: $font-family-text;
+  font-size: 1.25rem; /* 20px */
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@define-mixin text-regular-small {
+  font-family: $font-family-text;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@define-mixin text-regular-medium {
+  font-family: $font-family-text;
+  font-size: 1rem; /* 16px */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@define-mixin display-bold-small {
+  font-family: $font-family-display;
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700;
+  line-height: 0.98;
+}
+
+@define-mixin display-bold-medium {
+  font-family: $font-family-display;
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+  line-height: 0.98;
+}
+
+@define-mixin display-bold-average {
+  font-family: $font-family-display;
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+  line-height: 0.98;
+}
+
+@define-mixin display-bold-large {
+  font-family: $font-family-display;
+  font-size: 2.375rem; /* 38px */
+  font-weight: 700;
+  line-height: 0.98;
+}
+
+/* Glass Effect Mixin */
+@define-mixin glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}

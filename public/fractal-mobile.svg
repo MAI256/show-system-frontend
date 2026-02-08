@@ -1,0 +1,65 @@
+<svg width="430" height="1920" viewBox="0 0 530 2050" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display: block; overflow: hidden;">
+  <g clip-path="url(#clip_mobile)">
+    <!-- Вертикальные полосы -->
+    <g filter="url(#blur6)">
+      <rect x="0" y="120" width="75.7" height="1950" fill="url(#paint_linear_shared)"/>
+      <rect x="75.7" y="120" width="75.7" height="1950" fill="url(#paint_linear_shared)"/>
+      <rect x="151.4" y="120" width="75.7" height="1950" fill="url(#paint_linear_shared)"/>
+      <rect x="227.1" y="120" width="75.7" height="1950" fill="url(#paint_linear_shared)"/>
+      <rect x="302.8" y="120" width="75.7" height="1950" fill="url(#paint_linear_shared)"/>
+      <rect x="378.5" y="120" width="75.7" height="1950" fill="url(#paint_linear_shared)"/>
+      <rect x="454.2" y="120" width="75.8" height="1950" fill="url(#paint_linear_shared)"/>
+    </g>
+
+    <!-- Радиальный градиент -->
+    <rect x="0" y="0" width="530" height="2050" transform="rotate(-180 265 1025)" fill="url(#paint_radial)"/>
+  </g>
+
+  <!-- Нижняя затемненная область (вне clipPath) -->
+  <g filter="url(#filter_bottom_mobile)">
+    <path d="M-60 1200C30 1280 80 1400 265 1400C450 1400 500 1280 560 1200V2100H-60V1200Z" fill="black"/>
+  </g>
+
+  <!-- Верхняя затемненная область (вне clipPath) -->
+  <g filter="url(#filter_top_mobile)">
+    <path d="M560 750C500 680 380 -50 265 -50C150 -50 30 680 -60 750V-200H560V750Z" fill="black"/>
+  </g>
+
+  <defs>
+    <!-- Фильтр для полос -->
+    <filter id="blur6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="6" result="effect1_foregroundBlur_762_41"/>
+    </filter>
+
+    <!-- Фильтры для затемнений (мобильные) -->
+    <filter id="filter_bottom_mobile" x="-100" y="1100" width="800" height="1050" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="90" result="effect1_foregroundBlur_762_41"/>
+    </filter>
+
+    <filter id="filter_top_mobile" x="-100" y="-220" width="800" height="1050" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="90" result="effect1_foregroundBlur_762_41"/>
+    </filter>
+
+    <!-- Градиенты -->
+    <linearGradient id="paint_linear_shared" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop stop-opacity="0.46"/>
+      <stop offset="0.5" stop-opacity="0.32"/>
+      <stop offset="1" stop-opacity="0.22"/>
+    </linearGradient>
+
+    <radialGradient id="paint_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(265 2050) scale(530 2050)">
+      <stop stop-opacity="0.22"/>
+      <stop offset="1"/>
+    </radialGradient>
+
+    <clipPath id="clip_mobile">
+      <rect width="530" height="2050" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>

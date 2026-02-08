@@ -1,0 +1,47 @@
+{
+  "name": "ShowSystem", 
+  "description": "Комплексные решения для event-индустрии",
+  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "author": "ShowSystem",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShowSystem/ShowSystem.git"
+  },
+  "homepage": "https://github.com/ShowSystem/ShowSystem",
+  "keywords": [
+    "ShowSystem",
+    "event-industry",
+    "event-solutions",
+    "event-technology",
+    "event-management",
+    "event-planning"
+  ],
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/eslint": "1.9.0",
+    "@nuxt/fonts": "0.11.4",
+    "@nuxt/image": "1.11.0",
+    "eslint": "^9.0.0",
+    "nuxt": "^4.1.1",
+    "ofetch": "^1.5.1",
+    "vite": ">=6.0",
+    "vue": "^3.5.21",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "2.6.3",
+    "postcss-mixins": "^12.1.2",
+    "postcss-nested": "^7.0.2",
+    "postcss-simple-vars": "^7.0.1",
+    "webp-in-css": "^0.9.0"
+  }
+}

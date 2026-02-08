@@ -1,0 +1,80 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  compatibilityDate: "2025-07-15",
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
+  ssr: true,
+  nitro: {
+    externals: {
+      inline: ["ofetch", "node-fetch-native", "ipx"],
+    },
+  },
+  modules: ["@nuxt/eslint", "@nuxt/fonts", "@nuxt/image", "@nuxt/devtools"],
+  css: ["~/assets/css/_variables.css", "~/assets/css/global.css"],
+  app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || "/",
+    head: {
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon/favicon.ico" },
+        {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: "/favicon/apple-touch-icon.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "192x192",
+          href: "/favicon/icon-192.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "512x512",
+          href: "/favicon/icon-512.png",
+        },
+        { rel: "manifest", href: "/manifest.json" },
+      ],
+    },
+  },
+  fonts: {
+    families: [
+      { name: "Geologica", provider: "google", weights: [200, 300, 400] },
+      { name: "Unbounded", provider: "google", weights: [700] },
+    ],
+    processCSSVariables: true,
+  },
+  postcss: {
+    plugins: {
+      "postcss-nested": {},
+      "postcss-import": {},
+      "postcss-url": {},
+      "webp-in-css": {},
+      "postcss-simple-vars": {},
+      "postcss-mixins": {},
+      autoprefixer: {},
+      cssnano: {},
+    },
+  },
+  image: {
+    format: ["webp", "avif", "png"],
+    quality: 80,
+    densities: [1, 2, 3],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1440,
+      xxl: 1536,
+      "2xl": 1536,
+      xxxl: 1920,
+      "3xl": 1920,
+    },
+  },
+});
