@@ -13,6 +13,10 @@ export default defineNuxtConfig({
     externals: {
       inline: ["ofetch", "node-fetch-native", "ipx"],
     },
+    prerender: {
+      crawlLinks: true,
+      routes: ["/"],
+    },
   },
   modules: ["@nuxt/eslint", "@nuxt/fonts", "@nuxt/image", "@nuxt/devtools"],
   css: ["~/assets/css/_variables.css", "~/assets/css/global.css"],
